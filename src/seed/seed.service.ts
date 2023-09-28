@@ -25,7 +25,6 @@ export class SeedService {
       const segments = url.split('/');
       const no = +segments[segments.length - 2];
       const pokemon = { name, no };
-      console.log({ name, no })
       pokemones.push(pokemon);
     });
     const pokeRest = await this.pokemonModel.create(pokemones);
